@@ -9,12 +9,14 @@ Products - 32k
 
 Use the zip folder to extract the dataset.
 
-<img src="Images/dataset.png" width=500>
+<img src="Images/Dataset.png" width=500>
 
 ## Content based Filtering
 
 Product recommendation is done based on Content similarity between products.
 Similarity is calculated using cosine similarity.
+
+<img src="Images/Content_based.png" width=500>
 
 A major drawback of this algorithm is that it is limited to recommending items that are of the same type. It will never recommend products which the user has not bought or liked in the past. So if a user has watched or liked only action movies in the past, the system will recommend only action movies. It’s a very narrow way of building an engine.
 
@@ -25,6 +27,8 @@ To improve on this type of system, we need an algorithm that can recommend items
 1. Non Paramateric Approach
 
   K- Means
+  
+<img src="Images/non_para.png" width=500>  
 
 2. Parametric ML Approach
 Responsiveness for recommender systems translates to being able to react in almost real time to the arrival of new ratings in the system. Most recommendation algorithms need to retrain their complete model to integrate new data which can often not be done in real time. For some specific recommendation algorithms, online updating approaches have been developed such as SVD
@@ -32,6 +36,8 @@ Responsiveness for recommender systems translates to being able to react in almo
 SVD - compresses the large but sparse user-item matrix
 
 Matrix Factorization - breaking down a large matrix into a product of smaller ones This saves both time and space
+
+<img src="Images/para.png" width=500>
 
 ## Hybrid Filtering
 
@@ -45,10 +51,17 @@ Usually you have to wait at least until the next training cycle, or until the us
 
 But the hybrid model can make predictions even in this case: It will simply use the partially available features to compute the recommendations.
 
-## Light FM library in Python was used to design the hybrid Recommendation System (https://www.kaggle.com/niyamatalmass/lightfm-hybrid-recommendation-system#LightFm-hybrid-recommender-for-CareerVillage)
-## Model Performance with only Product Features
+## Light FM library in Python was used to design the hybrid Recommendation System 
+(https://www.kaggle.com/niyamatalmass/lightfm-hybrid-recommendation-system#LightFm-hybrid-recommender-for-CareerVillage)
+## Model Performance with Interactions, Product & Customer Features
 Accuracy - 93.12% 
-## Model Performance with only Interaction Matrix
+## Model Performance with Interactions & Product Features
 Accuracy - 97.7%
-## Model Performance with both Product & Interaction Matrix
+## Model Performance with only Interaction Matrix
+Traditional collaborative filtering with matrix factorization method
 Accuracy - 94.23%
+
+## Conclusion
+When Product and Interaction terms are both added into the model, the model tends to perform better than when only Product Features are used as Model inputs.
+When Customer features are also added into the model, the model accuracy decreased. This can be because Customer features consist of just geolocations and no other demographic information such as Age, Gender, Height etc. is mentioned. 
+
