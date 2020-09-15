@@ -9,6 +9,8 @@ Products - 32k
 
 Use the zip folder to extract the dataset.
 
+<img src="Images/dataset.png" width=500>
+
 ## Content based Filtering
 
 Product recommendation is done based on Content similarity between products.
