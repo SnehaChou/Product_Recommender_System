@@ -22,7 +22,7 @@ To improve on this type of system, we need an algorithm that can recommend items
 
 1. Non Paramateric Approach
 
-K- Means
+  K- Means
 
 2. Parametric ML Approach
 Responsiveness for recommender systems translates to being able to react in almost real time to the arrival of new ratings in the system. Most recommendation algorithms need to retrain their complete model to integrate new data which can often not be done in real time. For some specific recommendation algorithms, online updating approaches have been developed such as SVD
